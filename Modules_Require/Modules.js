@@ -1,7 +1,8 @@
 const data = require('./data');
 
-console.log(data);
+console.log(data.name);
 
-const os = require('os');
-console.log(os);
-console.log(os.homedir());
+console.log(data.add(5,2))
+// const os = require('os');
+// console.log(os);
+// console.log(os.homedir());

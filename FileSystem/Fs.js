@@ -1,7 +1,6 @@
 const fs = require('fs');  //runs the file
 
 
-
 // checks if the document exits 
 console.log(fs.existsSync('./document'))   // it is a synchronous function
 
