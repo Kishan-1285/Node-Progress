@@ -6,6 +6,7 @@ const fs = require('fs');  // --require will runs the file
 console.log(fs.existsSync('./document'))   // it is a synchronous function
 
 // checks if the document does not exits if not then the statement will be executed
+
 if (!fs.existsSync('./document')) {
 
     fs.mkdir('./documents', (err) => {   // mkdir is used to create a folder (directory)
@@ -49,5 +50,26 @@ if (!fs.existsSync('./document')) {
                 });
             })
         })
+    })
+}
+
+if(fs.existsSync('./documents/file.txt')){  // to delete a file 
+    fs.unlink("./documents/file.txt",(err)=>{
+        if(err){
+            console.log(err);
+        }else{
+            console.log("file removed");
+        }
+    })
+}
+
+
+if(fs.existsSync('./documents')){  // to delete a directory
+    fs.rmdir("./documents",(err)=>{
+        if(err){
+            console.log(err);
+        }else{
+            console.log("file removed");
+        }
     })
 }
