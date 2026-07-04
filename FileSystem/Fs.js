@@ -64,7 +64,7 @@ if(fs.existsSync('./documents/file.txt')){  // to delete a file
 }
 
 
-if(fs.existsSync('./documents')){  // to delete a directory
+if(fs.existsSync('./documents')){  // to delete a directory   -- happens when there is no file in the directory
     fs.rmdir("./documents",(err)=>{
         if(err){
             console.log(err);
